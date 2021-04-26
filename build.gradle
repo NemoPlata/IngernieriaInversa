@@ -1,0 +1,32 @@
+apply plugin: 'java'
+apply plugin: 'jacoco'
+apply plugin: 'war'
+
+repositories {
+    jcenter()    
+    mavenCentral()    
+}
+
+dependencies {
+    providedCompile 'javax:javaee-web-api:7.0'       
+    
+    testImplementation     'junit:junit:4.13'
+}
+
+dependencies {
+    implementation 'org.hibernate:hibernate-core:5.4.3.Final'    
+}
+
+dependencies {            
+    implementation 'mysql:mysql-connector-java:6.0.6'
+}
+
+dependencies {
+     compile 'javax.xml.bind:jaxb-api:2.3.0'
+
+    compile group: 'com.sun.xml.bind', name: 'jaxb-impl', version: '2.3.0'
+
+    compile group: 'com.sun.xml.bind', name: 'jaxb-core', version: '2.3.0'
+
+    compile group: 'javax.activation', name: 'activation', version: '1.1.1'    
+}
